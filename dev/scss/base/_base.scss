@@ -2,4 +2,44 @@
     Base
 ============= */
 
+body{
 
+    // background-color: red;
+
+    // @include md{
+    //     background-color: purple;
+    // }
+
+    // @include lg{
+    //     background-color: blue;
+    // }
+    p{
+        font-family: 'Tinos';
+        font-size: rem-calc(16px);
+        font-weight: 400;
+    }
+
+}
+
+.css-grid-global{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". header .";
+    
+    >div{
+        grid-area: header; 
+    }
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+
+    li{
+        list-style: none;
+    }
+}
+
+.show-menu{
+    display: block !important;
+}

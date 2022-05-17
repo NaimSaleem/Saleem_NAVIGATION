@@ -1,0 +1,150 @@
+/* =============
+    hero
+============= */
+
+
+
+
+
+
+
+
+#hero{
+
+    #heroimg{
+            background-image: url('../img/Main Page/hero.jpg');
+            width: 100vw;
+            height: 50vh;
+            background-size: cover;
+            // x: left | center | right;
+            // y: top | center | bottom;
+            background-position: center top;
+    }
+
+    .info-under{
+    >div{
+        display: flex;
+        align-items: center;
+        button{
+            border: none;
+            background-color: transparent;
+            font-size: rem-calc(18);
+            &:hover{
+                color: white;
+            }   
+            .show-for-lg{
+                display: none;
+            } 
+            margin-left: auto;    
+       }
+    
+    }
+    
+    
+
+        #info1{
+            background-color: var(--dark-orange);
+            padding: 16px;
+        }
+    
+        #info2{
+            background-color: var(--light-orange);
+            padding: 16px;
+        }
+        h3{
+            font-family: 'Tinos';
+            font-size: rem-calc(18px);
+        }
+    
+        #vod1{
+            margin: 11px 0 6px 0;
+        }
+    
+        #p1{
+            margin-top: 6px;
+        }
+    }
+
+    @include md{
+        img{
+            margin-left: 8px;
+
+        }
+        #heroimg{
+            height: 60vh;
+        }
+
+      .info-under{
+            
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: "first second";
+        
+         #info1{
+            grid-area: first;
+        }
+
+         #info2{
+            grid-area: second;
+            }
+
+            #p1{
+                margin-top: 0;
+            }
+
+            #vod1{
+                margin: 0 0 6px 0;
+            }
+
+        }
+
+    }
+
+    @include lg{
+
+        #heroimg{
+            height: 70vh;
+        }
+
+
+        .info-under{
+            
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: "first second";
+         div{
+            button{
+
+
+                .show-for-lg{
+                    display: inline;
+                } 
+                @include lg{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+         }  
+
+
+             #info1{
+                grid-area: first;
+            }
+    
+             #info2{
+                grid-area: second;
+                }
+            }
+
+    }
+
+    @include xxl{
+        .info-under{
+            #info1{
+                padding-left: 225px;
+            }
+
+        }
+    }
+
+}

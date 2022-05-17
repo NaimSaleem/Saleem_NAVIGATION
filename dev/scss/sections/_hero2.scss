@@ -1,0 +1,100 @@
+/* =============
+    hero2
+============= */
+#hero2{
+.images{
+    display: grid;
+    grid-template-rows: 50vh 70vh;
+}
+
+    #left{
+        margin-top: 34px;
+        background-image: url('../img/Main Page/echo_celebration.jpg');
+        background-size: cover;
+    }
+
+    #right{
+        background-image: url('../img/Main Page/echo_logo.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    #rightbot{
+        background-image: url('../img/Main Page/scripe_portrait.jpg');
+        background-size: cover;
+        .show-for-xxl{
+            display: none;
+        }
+    }
+
+
+@include md{
+    .images{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "left right";
+        grid-template-rows: 60vh;
+        
+        #left{
+            grid-area: left;
+            width: 100%;
+         }
+    
+        #right{
+            grid-area: right;
+            width: 100%;
+            margin-top: 34px;
+        } 
+
+        
+    }
+@include lg{
+    .images{
+        display: grid;
+        grid-template-columns: 16px repeat(3, 1fr) 16px;
+        grid-template-areas: 
+        ". left left right ."
+        ". left left right .";
+        #left{
+            width: 100%;
+            grid-area: left;
+         }
+    
+        #right{
+            width: 100%;
+            grid-area: right;
+            } 
+        }
+
+    }
+@include xxl{
+
+    .images{
+        grid-template-rows: 50vh 50vh;
+        grid-template-areas:
+        ". left left right ."
+        ". left left rightbot.";
+    }
+    #left{
+        margin-left: 18px;
+    }
+
+    #right{
+        margin-right: 18px;
+    }
+
+    #rightbot{
+        width: 100%;
+        grid-area: rightbot;
+        margin-right: 18px;
+        .show-for-xxl{
+            display: inline;
+        }
+    }
+
+}
+
+
+    }
+}

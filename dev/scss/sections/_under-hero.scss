@@ -1,0 +1,117 @@
+/* =============
+   under-hero
+============= */
+#under-hero{
+
+   body{
+      margin: 0;
+   }
+   #start1{
+      background-color: var(--light-green);
+      margin-top:  16px;
+      padding: 16px;
+      aside{
+         background-image: url('../img/Main Page/lifting.jpg');
+         background-position: 50% 50%;
+      }
+   }
+
+   #start2{
+      background-color: var(--light-green);
+      margin-top: 16px;
+      padding:  16px;
+      aside{
+         background-image: url('../img/Main Page/gear.svg');
+         background-position: 50% 50%;
+      }
+   }
+
+   h2{
+      font-family: 'Montserrat';
+      font-size: rem-calc(30);
+      font-weight: 900;
+      font-style: italic;
+   }
+
+   // aside{
+   //    margin-top: 52px;
+   //    margin-bottom: 42px;
+   // }
+
+   button{
+      font-family: 'Tinos';
+      font-size: rem-calc(14);
+      font-weight: 400;
+      text-align: left;
+      margin-top: 24px;
+      padding: 7px 12px 10px 26px;
+      background-color: var(--light-orange);
+      border: none;
+      transition: 0.25s;
+      
+      &:hover{
+         background-color: var(--dark-orange);
+     }
+   }
+
+   .starts{
+
+      .under-hero-content{
+         display: flex;
+         display: grid;
+         grid-template-columns: 70% auto;
+         align-items: center;
+
+         .flush-right{
+            margin-left: auto;
+         }
+         aside{
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            border: 4px solid white;
+
+            // img{
+            //    width: 100%;
+            // } 
+         }
+
+      }
+
+   }
+
+
+   @include md{
+
+      h2{
+         font-family: 'Montserrat';
+         font-size: rem-calc(31);
+         font-weight: 900;
+         font-style: italic;
+      }
+      .starts{
+         display: grid;
+         grid-template-columns:16px auto 16px auto 16px;
+         grid-template-areas: ". first . third .";
+         margin-top: 29px;
+         margin-bottom: 39px;
+
+         #start1{
+            // border: 1px solid red;
+            grid-area: first;
+            padding: 24px;
+        }
+
+         #start2{
+            // border: 1px solid red;
+            grid-area: third;
+            padding: 24px;
+            }
+        }
+      }
+
+      @include xxl{
+         margin: 0 225px 0 225px;
+      }
+   }
+

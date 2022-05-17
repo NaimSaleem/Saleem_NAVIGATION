@@ -1,0 +1,81 @@
+/* =============
+    search
+============= */
+#search{
+    margin: 70px 0 20px 0; 
+
+    @include xxl{
+        margin-left: 255px;
+        margin-right: 255px;
+    }
+
+    div{
+        #searchInput{
+            form{
+                display: flex;
+                input{
+                    width: 100%;
+                    box-sizing: border-box;
+                    border: none;
+                    border-bottom: 1px solid var(--grey);
+                    border-radius: 0;
+                    color: var(--grey);
+                    font-family: 'Montserrat';
+                    font-size: rem-calc(18);
+                    font-weight: 200;
+
+                    @include xl{
+                        margin-right: 16px;
+                    }
+
+                    @include md{
+                        font-size: rem-calc(30);
+                    }
+
+                    @include lg{
+                        font-size: rem-calc(35);
+                    }
+                
+                }
+
+                button{
+                    background-color: var(--light-green);
+                    border-radius: 3.5px;
+                    padding: 6px 10px 4px;
+                    margin: 0;
+                    border: none;
+                    transition: 0.25s;
+
+                    @include md{
+                        padding: 9px 16px 6px;
+                    }
+
+                    &:hover{
+                        background-color: var(--light-orange)
+                    }
+                }  
+
+
+
+        
+
+
+            }
+        }
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: var(--grey);
+        opacity: 1; /* Firefox */
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: var(--grey);
+      }
+      
+      ::-ms-input-placeholder { /* Microsoft Edge */
+        color: var(--grey);
+      }
+
+
+}

@@ -1,0 +1,217 @@
+/* =============
+    news
+============= */
+#news{
+
+    h1{
+        font-family: 'Montserrat';
+        font-size: rem-calc(20px);
+        font-weight: 300;
+        margin-top: 20px;
+        color:  var(--grey)
+    }
+
+    .news-all{
+        padding: 16px;
+    }
+    #news1{
+        margin-top: 16px;
+        aside{
+            background-image: url('../img/Main Page/liquidmax.jpg');
+            height: 165px;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    #news2{
+        margin-top: 16px;
+        aside{
+            height: 165px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('../img/Main Page/jailer_defeat.jpg')   
+        }
+
+    }
+
+    #news3{
+        margin-top: 16px;
+        aside{
+            height: 165px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('../img/Main Page/deathwing.jpg')
+        }
+
+    }
+
+    #news4{
+        margin-top: 16px;
+        aside{
+            height: 165px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('../img/Main Page/lich_king.jpg')
+        }
+    }
+
+    #news5{
+        margin-top: 16px;
+        aside{
+            height: 165px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('../img/Main Page/bfa_promo.jpg')
+        }
+
+    }
+    .news-all{
+        background-color: var(--light-green);
+    }
+
+
+    h2{
+        font-family: 'Montserrat';
+        font-size: rem-calc(24px);
+        font-weight: 900;
+        font-style: italic;
+        Margin: 18px 0 18px 0;
+    }
+
+    button{
+        font-family: 'Tinos';
+        font-size: rem-calc(14px);
+        font-weight: 700;
+        margin-top: 34px;
+        padding: 7px 12px 10px 26px;
+    }
+
+    p{
+        margin-bottom: 36px;
+    }
+
+
+    #news-header{
+        clear: both;
+    }
+
+    .news-images{
+        width: 100%;
+    }
+
+    .news-text{
+    clear: both;
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". header .";
+
+    div{
+        grid-area: header; 
+     }
+    }
+
+    @include md{
+        clear: both;
+        display: grid;
+        grid-template-columns: 16px 1fr 1fr 16px 1fr 1fr 16px;
+        grid-row-gap: 16px;
+        grid-row: auto;
+        // grid-column-gap: 16px;
+        grid-template-areas: 
+        ". header header header header header ."
+        ". first first . second second ."
+        ". third third . fourth fourth ."
+        ". . fifth fifth fifth . ."
+        
+        ;
+        #news-header{
+            grid-area: header;
+            margin-bottom: -16px;
+        }
+
+        h1{
+            font-size: rem-calc(28px);
+        }
+
+        // .news-images{
+        //     grid-area: first;
+        // }
+
+        #news1{
+            grid-area: first;
+        }
+
+        #news2{
+            grid-area: second;
+        }
+
+        #news3{
+            grid-area: third;
+        }
+
+        #news4{
+            grid-area: fourth;
+        }
+
+        #news5{
+            grid-area: fifth;
+        }
+    }
+
+    @include lg{
+        clear: both;
+        display: grid;
+        grid-template-columns: 16px 1fr 1fr 16px 1fr 16px 1fr 16px 1fr 1fr 16px;
+        grid-row-gap: 16px;
+        grid-row: auto;
+        // grid-column-gap: 16px;
+        grid-template-areas: 
+        ". header header header header header header header header header ."
+        ". first first . second second second . third third ."
+        ". . fourth fourth fourth . fifth fifth fifth . ."
+        
+        ;
+
+        #news-header{
+            grid-area: header;
+            margin-bottom: -16px;
+        }
+        
+        h1{
+            font-size: rem-calc(37px);
+        }
+
+
+        // .news-images{
+        //     grid-area: first;
+        // }
+
+        #news1{
+            grid-area: first;
+        }
+
+        #news2{
+            grid-area: second;
+        }
+
+        #news3{
+            grid-area: third;
+        }
+
+        #news4{
+            grid-area: fourth;
+        }
+
+        #news5{
+            grid-area: fifth;
+        }
+    }
+    
+    @include xxl{
+        margin-left: 225px;
+        margin-right: 225px;
+    }
+
+}
+    

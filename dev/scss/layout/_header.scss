@@ -1,3 +1,52 @@
 /* =============
     Header
 ============= */
+header{
+background: rgb(255,247,229);
+background: linear-gradient(90deg, var(--light-green) 0%, var(--dark-orange) 52%, var(--light-orange) 94%);
+position: fixed;
+top: 0;
+// right: ;
+left: 0;
+// bottom: 0;
+width: 100%;
+
+div{
+
+    display: grid;
+    grid-template-columns: 16px 50% auto 16px;
+    grid-template-areas: ". left right .";
+
+
+        #logo-container{
+            grid-area: left;
+            display: flex;
+            
+        }
+
+        #burger-container{
+            grid-area: right;
+            display: flex;
+            justify-content: flex-end;
+
+            #burger-btn{
+                @include lg{
+                    display: none;
+            }
+
+            
+            }
+
+            button{
+
+                border: none;
+                background-color: transparent;
+                padding: 16px
+            }
+            
+        }
+
+}
+
+}
+ 

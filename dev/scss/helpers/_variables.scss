@@ -15,7 +15,22 @@ $screen-lg-min: 1024px;
 // Large desktops
 $screen-xl-min: 1200px;
 
+$screen-xxl-min: 1440px;
+
 
 // Colors
 $white: #fff;
 $black: #000;
+
+// CSS Var
+
+:root{
+    --dark-orange: #E39360;
+    --light-orange: #F7B67E;
+    --white: #FFF;
+    --black: #000;
+    --light-green: #B6FFE9;
+    --off-white: #E0DFD5;
+    --navy-blue: #34506C;
+    --grey: #637275;
+}

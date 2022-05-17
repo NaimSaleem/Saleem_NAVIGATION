@@ -1,3 +1,38 @@
 /* =============
     Buttons
 ============= */
+button{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.l-orange-button{
+    background-color: var(--light-orange);
+    border: none;
+    justify-content: center;
+    transition: 0.25s;
+
+
+    &:hover{
+        background-color: var(--dark-orange);
+    }
+
+    .show-for-lg{
+        border: none;
+        background-color: transparent;
+        font-size: rem-calc(18); 
+    }
+}
+
+.statbutton{
+    background-color: var(--light-orange);
+    border: none;
+    justify-content: center;
+    transition: 0.25s;
+
+
+    &:hover{
+        background-color: var(--dark-orange);
+    }
+}
